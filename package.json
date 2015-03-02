@@ -1,0 +1,27 @@
+{
+  "name": "react-flux-api-calls",
+  "version": "0.0.1",
+  "description": "React/Flux Where to make API calls",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run build && node server.js",
+    "start-dev": "npm run watch & npm start",
+    "build": "browserify -t reactify app.js > static/bundle.js",
+    "watch": "watchify -t reactify app.js lib/**/*.* -o static/bundle.js -dv"
+  },
+  "author": "Brian Schemp",
+  "dependencies": {
+    "ecstatic": "^0.5.8",
+    "es6-promise": "^2.0.1",
+    "flux": "^2.0.1",
+    "object-assign": "^2.0.0",
+    "react": "^0.12.2",
+    "routes": "^2.0.0",
+    "superagent": "^0.21.0"
+  },
+  "devDependencies": {
+    "browserify": "^8.1.1",
+    "reactify": "^1.0.0",
+    "watchify": "^2.3.0"
+  }
+}
