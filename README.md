@@ -87,7 +87,7 @@ Store.dispatchToken = Dispatcher.register(function (payload) {
 		case ActionConstants.RECEIVE_CATEGORIES:
 			
 			// Callback to handle the response from the action.
-			setCategories();
+			setCategories(payload.categories);
 			break;
 			
 		default:
